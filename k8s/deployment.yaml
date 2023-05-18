@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: github_action
-          image: "** ecr image arn r goes here **"
+          image: "398081196462.dkr.ecr.ca-central-1.amazonaws.com/github_action"
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
