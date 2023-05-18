@@ -1,3 +1,3 @@
 #! /bin/sh
-eksctl create -f eks-cluster.yaml
+eksctl create cluster -f eks-cluster.yaml
  

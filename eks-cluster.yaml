@@ -2,8 +2,9 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eks-cluster
+  name: gitHub-action
   region: ca-central-1
+  version: "1.24"
 
 nodeGroups:
   - name: linux-nodes
@@ -13,7 +14,8 @@ nodeGroups:
     maxSize: 3
     volumeSize: 80
     tags:
-      - key: "project"
-      - value: "github_action"
+      "environment": "dev"
+      "project": "github_action"
     ssh:
       allow: true
+      publicKeyPath: ~/.ssh/id_ec2.pub
