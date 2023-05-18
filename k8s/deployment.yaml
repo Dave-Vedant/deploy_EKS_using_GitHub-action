@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: github_action
+  name: githubActionDeployment
   labels:
-    app: github_action
+    app: githubActionDeployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: github_action
+      app: githubActionDeployment
   template:
     metadata:
       labels:
-        app: github_action
+        app: githubActionDeployment
     spec:
       containers:
-        - name: github_action
-          image: "398081196462.dkr.ecr.ca-central-1.amazonaws.com/github_action:1.0"
+        - name: githubActionDeployment
+          image: "398081196462.dkr.ecr.ca-central-1.amazonaws.com/githubActionDeployment:1.0"
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
