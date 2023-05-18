@@ -34,12 +34,13 @@ jobs:
         
       - name: Build, tag and push docker image to amazon ecr
         env:
-          REGITSTRY: ${{  steps.login-to-ecr.outputs.registry  }}
+          REGISTRY: ${{  steps.login-to-ecr.outputs.registry  }}
           REPOSITORY: github_action
           IMAGE_TAG: 1.0
         run: |
+          echo $REGISTRY
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
-          docker push $REGITSTRY/$REPOSITORY:$IMAGE_TAG
+          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
 
       - name: update kube config
         run: aws eks update-kubeconfig --name github_action
