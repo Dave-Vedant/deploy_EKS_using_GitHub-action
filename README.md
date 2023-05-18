@@ -23,3 +23,5 @@ Step 6:
 
 Step 7:
 - create the repo secrets in github repository (setting/secrets...)
+
+"trigger"
