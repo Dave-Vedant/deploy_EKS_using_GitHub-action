@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: github-action-deployment
-          image: "public.ecr.aws/j4m1p3o4/github_action:1.0"
+          image: "398081196462.dkr.ecr.ca-central-1.amazonaws.com/github_action:1.0"
           imagePullPolicy: AlwaysS
           ports:
             - containerPort: 8080

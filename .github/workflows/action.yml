@@ -38,7 +38,6 @@ jobs:
           REPOSITORY: github_action
           IMAGE_TAG: 1.0
         run: |
-          echo $REGISTRY
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
 
