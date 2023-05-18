@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: github_action
+  labels:
+    app: github_action
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: github_action
+  template:
+    metadata:
+      labels:
+        app: github_action
+    spec:
+      containers:
+        - name: github_action
+          image: "** ecr image arn r goes here **"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
