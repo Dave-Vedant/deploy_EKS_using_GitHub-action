@@ -4,7 +4,8 @@
 
 Step 1 : 
 - create the EKS cluster 
-    `eksctl create cluster --name primuslearning --region us-east-2 --nodegroup-name linux-nodes --node-type t2.micro --nodes 2`
+    run the ./script.sh file with argument 'create' or 'delete'
+    
 
 Step 2:
 - import the application server code
