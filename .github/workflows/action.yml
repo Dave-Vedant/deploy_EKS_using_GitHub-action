@@ -4,8 +4,6 @@ name: Nodejs app deploy to EKS cluster
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
 
 
 jobs:
